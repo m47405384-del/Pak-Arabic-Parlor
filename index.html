@@ -1,208 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pak Arabic Parlor & Stitching Point – Service Booking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pak Arabic Parlor & Stitching Point — Rate List (No-JS Calculator)</title>
 <style>
-  :root{ --pink:#ec4899; --purple:#8b5cf6; --gold:#fbbf24; --mint:#16a34a; }
-  body{ font-family:'Poppins',sans-serif; background:linear-gradient(135deg,#fff1f2,#fdf2f8,#eef2ff); color:#333; margin:0 }
-  header{ background:linear-gradient(90deg,var(--pink),var(--purple)); color:#fff; text-align:center; padding:18px 8px }
-  header h1{ margin:0; font-size:1.6em } header h2{ margin:6px 0 0; font-weight:400; font-size:1em }
-  .banner{ text-align:center; background:#fde68a; color:#92400e; font-weight:600; padding:10px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold) }
-  .box{ background:#fff; margin:10px 12px; padding:15px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.08) }
-  .box h3{ color:var(--pink); border-bottom:1px dashed #ddd; padding-bottom:5px; margin-bottom:10px; font-size:1.05em }
-  .service{ display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px dotted #eee; font-size:.94em }
-  .price{ color:var(--mint); font-weight:700 }
-  .controls input[type="text"]{ width:100%; padding:10px; font-size:1em; border:1px solid #ccc; border-radius:8px; outline:none }
-  .controls input[type="text"]:focus{ border-color:var(--pink) }
-  .total{ text-align:right; font-weight:800; color:var(--mint); font-size:1.1em; margin-top:8px }
-  button{ background:var(--pink); color:#fff; border:none; border-radius:25px; padding:10px 20px; font-size:1em; font-weight:600; cursor:pointer; margin-top:12px }
-  footer{ background:var(--purple); color:#fff; text-align:center; padding:12px 10px; border-top:3px solid var(--gold); font-size:.9em }
-  @media (max-width:600px){ header h1{font-size:1.35em} header h2{font-size:.95em} .service{font-size:.9em} }
+  :root{--pink:#ec4899;--purple:#8b5cf6;--gold:#fbbf24;--mint:#16a34a;}
+  body{font-family:Poppins,Arial,sans-serif;background:linear-gradient(135deg,#fff1f2,#fdf2f8,#eef2ff);color:#333;margin:0}
+  header{background:linear-gradient(90deg,var(--pink),var(--purple));color:#fff;text-align:center;padding:18px}
+  header h1{margin:0;font-size:1.6rem}
+  header h2{margin:6px 0 0;font-weight:400;font-size:1rem}
+  .banner{background:#fde68a;color:#92400e;text-align:center;padding:10px;font-weight:600;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold)}
+  .wrap{max-width:900px;margin:14px auto;padding:0 10px}
+  form{background:#fff;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.08);padding:16px}
+  .group{border:1px solid #f1d2e3;border-radius:12px;margin:12px 0;overflow:hidden}
+  .group h3{margin:0;padding:10px 12px;color:var(--pink);background:#fff7fb;border-bottom:1px dashed #ead8e6;font-size:1.05rem}
+  .row{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px dotted #eee}
+  .row:last-child{border-bottom:none}
+  .price{color:var(--mint);font-weight:700}
+  .footbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px;padding:12px;border:2px solid #efe7ff;border-radius:12px;background:#faf7ff}
+  .footbar .total{font-weight:800;color:var(--mint);font-size:1.15rem}
+  .btn{appearance:none;border:none;background:var(--pink);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer}
+  .note{font-size:.9rem;color:#666}
+  input[type="text"]{width:100%;padding:10px;border:1px solid #ccc;border-radius:10px}
+  @media (max-width:640px){ .row{grid-template-columns:1fr auto auto} }
+  @page{size:A4;margin:18mm}
 </style>
 </head>
 <body>
+
 <header>
   <h1>🌸 Pak Arabic Parlor & Stitching Point 🌸</h1>
   <h2>Al Khobar Shamalia</h2>
 </header>
 <div class="banner">✨ October Glow Offer – 10% OFF All Services! ✨</div>
 
-<!-- Customer details -->
-<div class="box controls">
-  <label><b>Customer Name:</b></label>
-  <input type="text" id="customerName" placeholder="Enter your name">
+<div class="wrap">
+
+  <!-- PURE-HTML CALCULATOR -->
+  <form
+    action=""
+    oninput="
+      total.value =
+      (m1.checked?+m1.value:0)+(m2.checked?+m2.value:0)+(m3.checked?+m3.value:0)+(m4.checked?+m4.value:0)+(m5.checked?+m5.value:0)+
+      (m6.checked?+m6.value:0)+(m7.checked?+m7.value:0)+(m8.checked?+m8.value:0)+(m9.checked?+m9.value:0)+(m10.checked?+m10.value:0)+
+
+      (w1.checked?+w1.value:0)+(w2a.checked?+w2a.value:0)+(w2b.checked?+w2b.value:0)+(w3a.checked?+w3a.value:0)+(w3b.checked?+w3b.value:0)+
+      (w4.checked?+w4.value:0)+(w5a.checked?+w5a.value:0)+(w5b.checked?+w5b.value:0)+
+
+      (f1.checked?+f1.value:0)+(f2.checked?+f2.value:0)+(f3.checked?+f3.value:0)+(f4.checked?+f4.value:0)+(f5.checked?+f5.value:0)+
+      (f6.checked?+f6.value:0)+(f7.checked?+f7.value:0)+(f8.checked?+f8.value:0)+(f9.checked?+f9.value:0)+(f10.checked?+f10.value:0)+
+      (f11.checked?+f11.value:0)+(f12.checked?+f12.value:0)+(f13.checked?+f13.value:0)+(f14.checked?+f14.value:0)+(f15.checked?+f15.value:0)+
+      (f16.checked?+f16.value:0)+(f17.checked?+f17.value:0)+(f18.checked?+f18.value:0)+(f19.checked?+f19.value:0)+(f20.checked?+f20.value:0)+
+      (f21.checked?+f21.value:0)+(f22.checked?+f22.value:0)+
+
+      (t1.checked?+t1.value:0)+(t2.checked?+t2.value:0)+(t3.checked?+t3.value:0)+(t4.checked?+t4.value:0)+(t5.checked?+t5.value:0)+
+      (t6.checked?+t6.value:0)+(t7.checked?+t7.value:0)+(t8.checked?+t8.value:0)+(t9.checked?+t9.value:0)+(t10.checked?+t10.value:0)+
+      (t11.checked?+t11.value:0)+(t12.checked?+t12.value:0)+
+
+      (h1.checked?+h1.value:0)+(h2.checked?+h2.value:0)+(h3.checked?+h3.value:0)+(h4.checked?+h4.value:0)+(h5a.checked?+h5a.value:0)+
+      (h5b.checked?+h5b.value:0)+(h5c.checked?+h5c.value:0)+(h6.checked?+h6.value:0)+(h7.checked?+h7.value:0)+(h8.checked?+h8.value:0)+
+      (h9.checked?+h9.value:0)+(h10.checked?+h10.value:0)+(h11.checked?+h11.value:0)+(h12.checked?+h12.value:0)+(h13.checked?+h13.value:0)+
+      (h14.checked?+h14.value:0)+(h15.checked?+h15.value:0)+
+
+      (hen1.checked?+hen1.value:0)+(hen2.checked?+hen2.value:0)+(hen3.checked?+hen3.value:0)+(hen4.checked?+hen4.value:0)+(hen5.checked?+hen5.value:0)+
+
+      (x1.checked?+x1.value:0)+(x2.checked?+x2.value:0)+(x3.checked?+x3.value:0)+(x4.checked?+x4.value:0)+(x5.checked?+x5.value:0)+
+      (x6.checked?+x6.value:0)+(x7.checked?+x7.value:0);
+    "
+  >
+
+    <!-- Client name (not used for calc; handy for printing) -->
+    <div class="group">
+      <h3>👩 Customer</h3>
+      <div class="row" style="grid-template-columns:140px 1fr;">
+        <label for="cust">Name</label>
+        <input type="text" id="cust" name="customer" placeholder="Enter customer name (optional)">
+      </div>
+    </div>
+
+    <!-- Manicure & Pedicure -->
+    <div class="group">
+      <h3>💅 Manicure & Pedicure</h3>
+      <div class="row"><div>Light Manicure</div><div class="price">54</div><div><input type="checkbox" id="m1" name="m1" value="54"></div></div>
+      <div class="row"><div>Special Manicure</div><div class="price">63</div><div><input type="checkbox" id="m2" name="m2" value="63"></div></div>
+      <div class="row"><div>Regular Manicure</div><div class="price">45</div><div><input type="checkbox" id="m3" name="m3" value="45"></div></div>
+      <div class="row"><div>Nail Cut &amp; Filing (Hands)</div><div class="price">18</div><div><input type="checkbox" id="m4" name="m4" value="18"></div></div>
+      <div class="row"><div>Nail Polish (Hands)</div><div class="price">14</div><div><input type="checkbox" id="m5" name="m5" value="14"></div></div>
+      <div class="row"><div>Light Pedicure</div><div class="price">63</div><div><input type="checkbox" id="m6" name="m6" value="63"></div></div>
+      <div class="row"><div>Special Pedicure</div><div class="price">81</div><div><input type="checkbox" id="m7" name="m7" value="81"></div></div>
+      <div class="row"><div>Regular Pedicure</div><div class="price">72</div><div><input type="checkbox" id="m8" name="m8" value="72"></div></div>
+      <div class="row"><div>Nail Cut &amp; Filing (Feet)</div><div class="price">18</div><div><input type="checkbox" id="m9" name="m9" value="18"></div></div>
+      <div class="row"><div>Nail Polish (Feet)</div><div class="price">14</div><div><input type="checkbox" id="m10" name="m10" value="14"></div></div>
+    </div>
+
+    <!-- Waxing -->
+    <div class="group">
+      <h3>🕯 Waxing</h3>
+      <div class="row"><div>Full Body Wax</div><div class="price">180</div><div><input type="checkbox" id="w1" name="w1" value="180"></div></div>
+      <div class="row"><div>Legs — Full</div><div class="price">90</div><div><input type="checkbox" id="w2a" name="w2a" value="90"></div></div>
+      <div class="row"><div>Legs — Half</div><div class="price">45</div><div><input type="checkbox" id="w2b" name="w2b" value="45"></div></div>
+      <div class="row"><div>Arms — Full</div><div class="price">81</div><div><input type="checkbox" id="w3a" name="w3a" value="81"></div></div>
+      <div class="row"><div>Arms — Half</div><div class="price">41</div><div><input type="checkbox" id="w3b" name="w3b" value="41"></div></div>
+      <div class="row"><div>Underarms</div><div class="price">27</div><div><input type="checkbox" id="w4" name="w4" value="27"></div></div>
+      <div class="row"><div>Hands</div><div class="price">14</div><div><input type="checkbox" id="w5a" name="w5a" value="14"></div></div>
+      <div class="row"><div>Feet</div><div class="price">14</div><div><input type="checkbox" id="w5b" name="w5b" value="14"></div></div>
+    </div>
+
+    <!-- Facial & Skin Treatments -->
+    <div class="group">
+      <h3>🌺 Facial & Skin Treatments</h3>
+      <div class="row"><div>Deep Clean Up</div><div class="price">63</div><div><input type="checkbox" id="f1" name="f1" value="63"></div></div>
+      <div class="row"><div>Regular Facial</div><div class="price">72</div><div><input type="checkbox" id="f2" name="f2" value="72"></div></div>
+      <div class="row"><div>Golden Facial + Whitening Facial</div><div class="price">108</div><div><input type="checkbox" id="f3" name="f3" value="108"></div></div>
+      <div class="row"><div>Bleach Only</div><div class="price">36</div><div><input type="checkbox" id="f4" name="f4" value="36"></div></div>
+      <div class="row"><div>Skin Polish</div><div class="price">72</div><div><input type="checkbox" id="f5" name="f5" value="72"></div></div>
+      <div class="row"><div>Herbal Whitening</div><div class="price">99</div><div><input type="checkbox" id="f6" name="f6" value="99"></div></div>
+      <div class="row"><div>Skin Whitening</div><div class="price">90</div><div><input type="checkbox" id="f7" name="f7" value="90"></div></div>
+      <div class="row"><div>Skin Lightening Pack</div><div class="price">117</div><div><input type="checkbox" id="f8" name="f8" value="117"></div></div>
+      <div class="row"><div>Clean &amp; Glow 24K Whitening Gold Facial</div><div class="price">108</div><div><input type="checkbox" id="f9" name="f9" value="108"></div></div>
+      <div class="row"><div>Christine Whitening Facial</div><div class="price">90</div><div><input type="checkbox" id="f10" name="f10" value="90"></div></div>
+      <div class="row"><div>B-Cute Facial</div><div class="price">117</div><div><input type="checkbox" id="f11" name="f11" value="117"></div></div>
+      <div class="row"><div>Gold Series Facial</div><div class="price">126</div><div><input type="checkbox" id="f12" name="f12" value="126"></div></div>
+      <div class="row"><div>Doctor Derma Facial</div><div class="price">126</div><div><input type="checkbox" id="f13" name="f13" value="126"></div></div>
+      <div class="row"><div>Glowta White Special Facial</div><div class="price">135</div><div><input type="checkbox" id="f14" name="f14" value="135"></div></div>
+      <div class="row"><div>Hydra Facial</div><div class="price">135</div><div><input type="checkbox" id="f15" name="f15" value="135"></div></div>
+      <div class="row"><div>Silky Cool Gold Facial</div><div class="price">144</div><div><input type="checkbox" id="f16" name="f16" value="144"></div></div>
+      <div class="row"><div>Silky Cool Diamond Facial</div><div class="price">144</div><div><input type="checkbox" id="f17" name="f17" value="144"></div></div>
+      <div class="row"><div>Doctor Romeo Rice Facial</div><div class="price">90</div><div><input type="checkbox" id="f18" name="f18" value="90"></div></div>
+      <div class="row"><div>Doctor Romeo Vitamin C Facial</div><div class="price">90</div><div><input type="checkbox" id="f19" name="f19" value="90"></div></div>
+      <div class="row"><div>ANN Facial</div><div class="price">90</div><div><input type="checkbox" id="f20" name="f20" value="90"></div></div>
+      <div class="row"><div>Botanic Gold &amp; Whitening Facial</div><div class="price">108</div><div><input type="checkbox" id="f21" name="f21" value="108"></div></div>
+      <div class="row"><div>Clean &amp; Glow (extra listing safety)</div><div class="price">108</div><div><input type="checkbox" id="f22" name="f22" value="108"></div></div>
+    </div>
+
+    <!-- Threading & Bleach -->
+    <div class="group">
+      <h3>💆 Threading & Bleach</h3>
+      <div class="row"><div>Face Threading</div><div class="price">45</div><div><input type="checkbox" id="t1" name="t1" value="45"></div></div>
+      <div class="row"><div>Face Waxing</div><div class="price">54</div><div><input type="checkbox" id="t2" name="t2" value="54"></div></div>
+      <div class="row"><div>Face Bleach</div><div class="price">27</div><div><input type="checkbox" id="t3" name="t3" value="27"></div></div>
+      <div class="row"><div>Upper Lip + Chin</div><div class="price">14</div><div><input type="checkbox" id="t4" name="t4" value="14"></div></div>
+      <div class="row"><div>Eyebrow</div><div class="price">18</div><div><input type="checkbox" id="t5" name="t5" value="18"></div></div>
+      <div class="row"><div>Bleach (Item)</div><div class="price">18</div><div><input type="checkbox" id="t6" name="t6" value="18"></div></div>
+      <div class="row"><div>Color (Item)</div><div class="price">18</div><div><input type="checkbox" id="t7" name="t7" value="18"></div></div>
+      <div class="row"><div>Face Side (Wax)</div><div class="price">23</div><div><input type="checkbox" id="t8" name="t8" value="23"></div></div>
+      <div class="row"><div>Face Side (Thread)</div><div class="price">23</div><div><input type="checkbox" id="t9" name="t9" value="23"></div></div>
+      <div class="row"><div>Nose Inside</div><div class="price">9</div><div><input type="checkbox" id="t10" name="t10" value="9"></div></div>
+      <div class="row"><div>Forehead</div><div class="price">9</div><div><input type="checkbox" id="t11" name="t11" value="9"></div></div>
+      <div class="row"><div>Neck</div><div class="price">9</div><div><input type="checkbox" id="t12" name="t12" value="9"></div></div>
+    </div>
+
+    <!-- Hair Services -->
+    <div class="group">
+      <h3>💇 Hair Services</h3>
+      <div class="row"><div>Front Cut</div><div class="price">18</div><div><input type="checkbox" id="h1" name="h1" value="18"></div></div>
+      <div class="row"><div>Trimming</div><div class="price">27</div><div><input type="checkbox" id="h2" name="h2" value="27"></div></div>
+      <div class="row"><div>U/V Straight</div><div class="price">36</div><div><input type="checkbox" id="h3" name="h3" value="36"></div></div>
+      <div class="row"><div>Layer Step (Based on Length)</div><div class="price">72</div><div><input type="checkbox" id="h4" name="h4" value="72"></div></div>
+      <div class="row"><div>Blow Dry — Short</div><div class="price">36</div><div><input type="checkbox" id="h5a" name="h5a" value="36"></div></div>
+      <div class="row"><div>Blow Dry — Medium</div><div class="price">45</div><div><input type="checkbox" id="h5b" name="h5b" value="45"></div></div>
+      <div class="row"><div>Blow Dry — Long</div><div class="price">54</div><div><input type="checkbox" id="h5c" name="h5c" value="54"></div></div>
+      <div class="row"><div>Oil Hair SPA</div><div class="price">36</div><div><input type="checkbox" id="h6" name="h6" value="36"></div></div>
+      <div class="row"><div>Henna / Hair Fall + Treatment</div><div class="price">81</div><div><input type="checkbox" id="h7" name="h7" value="81"></div></div>
+      <div class="row"><div>Roots Highlights</div><div class="price">180</div><div><input type="checkbox" id="h8" name="h8" value="180"></div></div>
+      <div class="row"><div>Baby Girl (Hair)</div><div class="price">27</div><div><input type="checkbox" id="h9" name="h9" value="27"></div></div>
+      <div class="row"><div>Sticking (According to Hair Condition)</div><div class="price">225</div><div><input type="checkbox" id="h10" name="h10" value="225"></div></div>
+      <div class="row"><div>Straightening</div><div class="price">540</div><div><input type="checkbox" id="h11" name="h11" value="540"></div></div>
+      <div class="row"><div>Rebonding</div><div class="price">630</div><div><input type="checkbox" id="h12" name="h12" value="630"></div></div>
+      <div class="row"><div>Keratin + Protein Straightening Treatment</div><div class="price">720</div><div><input type="checkbox" id="h13" name="h13" value="720"></div></div>
+      <div class="row"><div>Hair Dye (Without Color)</div><div class="price">36</div><div><input type="checkbox" id="h14" name="h14" value="36"></div></div>
+      <div class="row"><div>Hair Dye (With Color)</div><div class="price">63</div><div><input type="checkbox" id="h15" name="h15" value="63"></div></div>
+    </div>
+
+    <!-- Henna Designs -->
+    <div class="group">
+      <h3>🌿 Henna Designs</h3>
+      <div class="row"><div>Hand Front Side Only</div><div class="price">14</div><div><input type="checkbox" id="hen1" name="hen1" value="14"></div></div>
+      <div class="row"><div>Hand Back Side Only</div><div class="price">14</div><div><input type="checkbox" id="hen2" name="hen2" value="14"></div></div>
+      <div class="row"><div>Hand to Half Arms</div><div class="price">23</div><div><input type="checkbox" id="hen3" name="hen3" value="23"></div></div>
+      <div class="row"><div>Hand to Full Arms</div><div class="price">32</div><div><input type="checkbox" id="hen4" name="hen4" value="32"></div></div>
+      <div class="row"><div>Baby Girl Hand</div><div class="price">9</div><div><input type="checkbox" id="hen5" name="hen5" value="9"></div></div>
+    </div>
+
+    <!-- Extras -->
+    <div class="group">
+      <h3>🛍 Extra Items Availability</h3>
+      <div class="row"><div>Organic Pakistani Original Red Hair Mehindi</div><div class="price">90</div><div><input type="checkbox" id="x1" name="x1" value="90"></div></div>
+      <div class="row"><div>Organic Fast Hair Growth Oil — 200 ml</div><div class="price">90</div><div><input type="checkbox" id="x2" name="x2" value="90"></div></div>
+      <div class="row"><div>Organic Fast Hair Growth Oil — 100 ml</div><div class="price">45</div><div><input type="checkbox" id="x3" name="x3" value="45"></div></div>
+      <div class="row"><div>Organic Fast Hair Growth Oil — 50 ml</div><div class="price">23</div><div><input type="checkbox" id="x4" name="x4" value="23"></div></div>
+      <div class="row"><div>Herbal Skin Whitening Botanic Mask (per pack)</div><div class="price">18</div><div><input type="checkbox" id="x5" name="x5" value="18"></div></div>
+      <div class="row"><div>Full Body Massage</div><div class="price">135</div><div><input type="checkbox" id="x6" name="x6" value="135"></div></div>
+      <div class="row"><div>All Face Problems Whitening Cream</div><div class="price">18</div><div><input type="checkbox" id="x7" name="x7" value="18"></div></div>
+    </div>
+
+    <!-- Total + Actions -->
+    <div class="footbar">
+      <div class="total">Total: <output name="total">0</output> SAR</div>
+
+      <!-- WhatsApp: opens chat with owner (no prefilled text without JS) -->
+      <button class="btn" type="submit"
+        formaction="https://wa.me/966582617487" formmethod="get">
+        Send to WhatsApp 💬
+      </button>
+
+      <div class="note">Tip: You can print this page (Ctrl/Cmd + P) for customers.</div>
+    </div>
+
+  </form>
 </div>
 
-<!-- MANICURE & PEDICURE -->
-<section class="box">
-  <h3>💅 Manicure & Pedicure</h3>
-  <label class="service">Light Manicure <span class="price">54 SAR <input type="checkbox" value="54" data-name="Light Manicure"></span></label>
-  <label class="service">Special Manicure <span class="price">63 SAR <input type="checkbox" value="63" data-name="Special Manicure"></span></label>
-  <label class="service">Regular Manicure <span class="price">45 SAR <input type="checkbox" value="45" data-name="Regular Manicure"></span></label>
-  <label class="service">Nail Cut & Filing (Hands) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Nail Cut & Filing (Hands)"></span></label>
-  <label class="service">Nail Polish (Hands) <span class="price">14 SAR <input type="checkbox" value="14" data-name="Nail Polish (Hands)"></span></label>
-  <label class="service">Light Pedicure <span class="price">63 SAR <input type="checkbox" value="63" data-name="Light Pedicure"></span></label>
-  <label class="service">Special Pedicure <span class="price">81 SAR <input type="checkbox" value="81" data-name="Special Pedicure"></span></label>
-  <label class="service">Regular Pedicure <span class="price">72 SAR <input type="checkbox" value="72" data-name="Regular Pedicure"></span></label>
-  <label class="service">Nail Cut & Filing (Feet) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Nail Cut & Filing (Feet)"></span></label>
-  <label class="service">Nail Polish (Feet) <span class="price">14 SAR <input type="checkbox" value="14" data-name="Nail Polish (Feet)"></span></label>
-</section>
-
-<!-- WAXING -->
-<section class="box">
-  <h3>🕯 Waxing</h3>
-  <label class="service">Full Body Wax <span class="price">180 SAR <input type="checkbox" value="180" data-name="Full Body Wax"></span></label>
-  <label class="service">Legs – Full <span class="price">90 SAR <input type="checkbox" value="90" data-name="Legs – Full"></span></label>
-  <label class="service">Legs – Half <span class="price">45 SAR <input type="checkbox" value="45" data-name="Legs – Half"></span></label>
-  <label class="service">Arms – Full <span class="price">81 SAR <input type="checkbox" value="81" data-name="Arms – Full"></span></label>
-  <label class="service">Arms – Half <span class="price">41 SAR <input type="checkbox" value="41" data-name="Arms – Half"></span></label>
-  <label class="service">Underarms <span class="price">27 SAR <input type="checkbox" value="27" data-name="Underarms"></span></label>
-  <label class="service">Hands <span class="price">14 SAR <input type="checkbox" value="14" data-name="Hands (Wax)"></span></label>
-  <label class="service">Feet <span class="price">14 SAR <input type="checkbox" value="14" data-name="Feet (Wax)"></span></label>
-</section>
-
-<!-- FACIAL & SKIN TREATMENTS -->
-<section class="box">
-  <h3>🌺 Facial & Skin Treatments</h3>
-  <label class="service">Deep Clean Up <span class="price">63 SAR <input type="checkbox" value="63" data-name="Deep Clean Up"></span></label>
-  <label class="service">Regular Facial <span class="price">72 SAR <input type="checkbox" value="72" data-name="Regular Facial"></span></label>
-  <label class="service">Golden Facial + Whitening Facial <span class="price">108 SAR <input type="checkbox" value="108" data-name="Golden Facial + Whitening Facial"></span></label>
-  <label class="service">Bleach Only <span class="price">36 SAR <input type="checkbox" value="36" data-name="Bleach Only"></span></label>
-  <label class="service">Skin Polish <span class="price">72 SAR <input type="checkbox" value="72" data-name="Skin Polish"></span></label>
-  <label class="service">Herbal Whitening <span class="price">99 SAR <input type="checkbox" value="99" data-name="Herbal Whitening"></span></label>
-  <label class="service">Skin Whitening <span class="price">90 SAR <input type="checkbox" value="90" data-name="Skin Whitening"></span></label>
-  <label class="service">Skin Lightening Pack <span class="price">117 SAR <input type="checkbox" value="117" data-name="Skin Lightening Pack"></span></label>
-  <label class="service">Clean & Glow 24K Whitening Gold Facial <span class="price">108 SAR <input type="checkbox" value="108" data-name="Clean & Glow 24K Whitening Gold Facial"></span></label>
-  <label class="service">Christine Whitening Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="Christine Whitening Facial"></span></label>
-  <label class="service">B-Cute Facial <span class="price">117 SAR <input type="checkbox" value="117" data-name="B-Cute Facial"></span></label>
-  <label class="service">Gold Series Facial <span class="price">126 SAR <input type="checkbox" value="126" data-name="Gold Series Facial"></span></label>
-  <label class="service">Doctor Derma Facial <span class="price">126 SAR <input type="checkbox" value="126" data-name="Doctor Derma Facial"></span></label>
-  <label class="service">Glowta White Special Facial <span class="price">135 SAR <input type="checkbox" value="135" data-name="Glowta White Special Facial"></span></label>
-  <label class="service">Hydra Facial <span class="price">135 SAR <input type="checkbox" value="135" data-name="Hydra Facial"></span></label>
-  <label class="service">Silky Cool Gold Facial <span class="price">144 SAR <input type="checkbox" value="144" data-name="Silky Cool Gold Facial"></span></label>
-  <label class="service">Silky Cool Diamond Facial <span class="price">144 SAR <input type="checkbox" value="144" data-name="Silky Cool Diamond Facial"></span></label>
-  <label class="service">Doctor Romeo Rice Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="Doctor Romeo Rice Facial"></span></label>
-  <label class="service">Doctor Romeo Vitamin C Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="Doctor Romeo Vitamin C Facial"></span></label>
-  <label class="service">ANN Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="ANN Facial"></span></label>
-  <label class="service">Botanic Gold & Whitening Facial <span class="price">108 SAR <input type="checkbox" value="108" data-name="Botanic Gold & Whitening Facial"></span></label>
-</section>
-
-<!-- THREADING & BLEACH -->
-<section class="box">
-  <h3>💆 Threading & Bleach</h3>
-  <label class="service">Face Threading <span class="price">45 SAR <input type="checkbox" value="45" data-name="Face Threading"></span></label>
-  <label class="service">Face Waxing <span class="price">54 SAR <input type="checkbox" value="54" data-name="Face Waxing"></span></label>
-  <label class="service">Face Bleach <span class="price">27 SAR <input type="checkbox" value="27" data-name="Face Bleach"></span></label>
-  <label class="service">Upper Lip + Chin <span class="price">14 SAR <input type="checkbox" value="14" data-name="Upper Lip + Chin"></span></label>
-  <label class="service">Eyebrow <span class="price">18 SAR <input type="checkbox" value="18" data-name="Eyebrow"></span></label>
-  <label class="service">Bleach (Item) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Bleach (Item)"></span></label>
-  <label class="service">Color (Item) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Color (Item)"></span></label>
-  <label class="service">Face Side (Wax) <span class="price">23 SAR <input type="checkbox" value="23" data-name="Face Side (Wax)"></span></label>
-  <label class="service">Face Side (Thread) <span class="price">23 SAR <input type="checkbox" value="23" data-name="Face Side (Thread)"></span></label>
-  <label class="service">Nose Inside <span class="price">9 SAR <input type="checkbox" value="9" data-name="Nose Inside"></span></label>
-  <label class="service">Forehead <span class="price">9 SAR <input type="checkbox" value="9" data-name="Forehead"></span></label>
-  <label class="service">Neck <span class="price">9 SAR <input type="checkbox" value="9" data-name="Neck"></span></label>
-</section>
-
-<!-- HAIR SERVICES -->
-<section class="box">
-  <h3>💇 Hair Services</h3>
-  <label class="service">Front Cut <span class="price">18 SAR <input type="checkbox" value="18" data-name="Front Cut"></span></label>
-  <label class="service">Trimming <span class="price">27 SAR <input type="checkbox" value="27" data-name="Trimming"></span></label>
-  <label class="service">U/V Straight <span class="price">36 SAR <input type="checkbox" value="36" data-name="U/V Straight"></span></label>
-  <label class="service">Layer Step (Based on Length) <span class="price">72 SAR <input type="checkbox" value="72" data-name="Layer Step"></span></label>
-  <label class="service">Blow Dry (Short) <span class="price">36 SAR <input type="checkbox" value="36" data-name="Blow Dry (Short)"></span></label>
-  <label class="service">Blow Dry (Medium) <span class="price">45 SAR <input type="checkbox" value="45" data-name="Blow Dry (Medium)"></span></label>
-  <label class="service">Blow Dry (Long) <span class="price">54 SAR <input type="checkbox" value="54" data-name="Blow Dry (Long)"></span></label>
-  <label class="service">Oil Hair SPA <span class="price">36 SAR <input type="checkbox" value="36" data-name="Oil Hair SPA"></span></label>
-  <label class="service">Henna/Hair Fall + Treatment <span class="price">81 SAR <input type="checkbox" value="81" data-name="Henna/Hair Fall + Treatment"></span></label>
-  <label class="service">Roots Highlights <span class="price">180 SAR <input type="checkbox" value="180" data-name="Roots Highlights"></span></label>
-  <label class="service">Baby Girl <span class="price">27 SAR <input type="checkbox" value="27" data-name="Baby Girl (Hair)"></span></label>
-  <label class="service">Sticking (According to Hair Condition) <span class="price">225 SAR <input type="checkbox" value="225" data-name="Sticking (According to Hair Condition)"></span></label>
-  <label class="service">Straightening <span class="price">540 SAR <input type="checkbox" value="540" data-name="Straightening"></span></label>
-  <label class="service">Rebonding <span class="price">630 SAR <input type="checkbox" value="630" data-name="Rebonding"></span></label>
-  <label class="service">Keratin + Protein Straightening Treatment <span class="price">720 SAR <input type="checkbox" value="720" data-name="Keratin + Protein Straightening Treatment"></span></label>
-  <label class="service">Hair Dye (Without Color) <span class="price">36 SAR <input type="checkbox" value="36" data-name="Hair Dye (Without Color)"></span></label>
-  <label class="service">Hair Dye (With Color) <span class="price">63 SAR <input type="checkbox" value="63" data-name="Hair Dye (With Color)"></span></label>
-</section>
-
-<!-- HENNA DESIGNS -->
-<section class="box">
-  <h3>🌿 Henna Designs</h3>
-  <label class="service">Hand Front Side Only <span class="price">14 SAR <input type="checkbox" value="14" data-name="Henna – Hand Front Side Only"></span></label>
-  <label class="service">Hand Back Side Only <span class="price">14 SAR <input type="checkbox" value="14" data-name="Henna – Hand Back Side Only"></span></label>
-  <label class="service">Hand to Half Arms <span class="price">23 SAR <input type="checkbox" value="23" data-name="Henna – Hand to Half Arms"></span></label>
-  <label class="service">Hand to Full Arms <span class="price">32 SAR <input type="checkbox" value="32" data-name="Henna – Hand to Full Arms"></span></label>
-  <label class="service">Baby Girl Hand <span class="price">9 SAR <input type="checkbox" value="9" data-name="Henna – Baby Girl Hand"></span></label>
-</section>
-
-<!-- EXTRA ITEMS -->
-<section class="box">
-  <h3>🛍 Extra Items Availability</h3>
-  <label class="service">Organic Pakistani Original Red Hair Mehindi <span class="price">90 SAR <input type="checkbox" value="90" data-name="Red Hair Mehindi (Organic Pakistani Original)"></span></label>
-  <label class="service">Organic Fast Hair Growth Oil – 200 ml <span class="price">90 SAR <input type="checkbox" value="90" data-name="Hair Growth Oil 200 ml"></span></label>
-  <label class="service">Organic Fast Hair Growth Oil – 100 ml <span class="price">45 SAR <input type="checkbox" value="45" data-name="Hair Growth Oil 100 ml"></span></label>
-  <label class="service">Organic Fast Hair Growth Oil – 50 ml <span class="price">23 SAR <input type="checkbox" value="23" data-name="Hair Growth Oil 50 ml"></span></label>
-  <label class="service">Herbal Skin Whitening Botanic Mask (per pack) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Herbal Skin Whitening Botanic Mask (per pack)"></span></label>
-  <label class="service">Full Body Massage <span class="price">135 SAR <input type="checkbox" value="135" data-name="Full Body Massage"></span></label>
-  <label class="service">All Face Problems Whitening Cream <span class="price">18 SAR <input type="checkbox" value="18" data-name="All Face Problems Whitening Cream"></span></label>
-</section>
-
-<!-- TOTAL + SEND -->
-<div class="box controls">
-  <div class="total">Total: <span id="total">0</span> SAR</div>
-  <button id="send">Send to WhatsApp 💬</button>
-</div>
-
-<footer>
-  Timing: 12:00 PM – 12:00 AM | Call / WhatsApp: +966-582617487
+<footer class="banner" style="background:var(--purple);color:#fff;border:none">
+  Timing: 12:00 PM – 12:00 AM &nbsp;|&nbsp; Call / WhatsApp: +966-582617487
 </footer>
 
-<script>
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const totalDisplay = document.getElementById('total');
-const sendBtn = document.getElementById('send');
-const nameInput = document.getElementById('customerName');
-
-checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
-
-function updateTotal(){
-  let total = 0;
-  checkboxes.forEach(c => { if(c.checked) total += parseFloat(c.value); });
-  totalDisplay.textContent = total.toFixed(0);
-}
-
-sendBtn.addEventListener('click', () => {
-  const selected = Array.from(checkboxes)
-    .filter(c => c.checked)
-    .map(c => ${c.dataset.name} (${parseFloat(c.value).toFixed(0)} SAR));
-
-  const customer = nameInput.value.trim() || "Customer";
-
-  if(selected.length === 0){
-    alert("Please select at least one service.");
-    return;
-  }
-
-  const total = totalDisplay.textContent;
-  const message =
-    *Pak Arabic Parlor Booking*%0A%0A +
-    👩 Name: ${encodeURIComponent(customer)}%0A +
-    %0A*Selected Services:*%0A- ${selected.join('%0A- ')}%0A%0A +
-    💰 *Total:* ${total} SAR%0A +
-    📍 Al Khobar Shamalia%0A +
-    ⏰ 12 PM – 12 AM;
-
-  const phone = "966582617487";
-  const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
-  const url = isMobile
-    ? https://wa.me/${phone}?text=${message}
-    : https://web.whatsapp.com/send?phone=${phone}&text=${message};
-
-  window.open(url, '_blank');
-});
-</script>
 </body>
 </html>
