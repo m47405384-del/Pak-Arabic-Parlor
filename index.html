@@ -3,230 +3,206 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pak Arabic Parlor & Stitching Point - Al Khobar Shamalia</title>
+<title>Pak Arabic Parlor & Stitching Point – Service Booking</title>
 <style>
-  :root{
-    --pink:#ec4899;
-    --purple:#8b5cf6;
-    --gold:#fbbf24;
-    --mint:#16a34a;
-  }
-  body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#fff1f2,#fdf2f8,#eef2ff);
-    margin:0;
-    color:#333;
-  }
-  header{
-    background:linear-gradient(90deg,var(--pink),var(--purple));
-    color:white;
-    text-align:center;
-    padding:20px 10px;
-  }
-  header h1{margin:0;font-size:1.6em}
-  header h2{margin:5px 0 0;font-weight:400;font-size:1em}
-  .offer-banner{
-    text-align:center;
-    background:#fde68a;
-    color:#92400e;
-    font-weight:600;
-    padding:10px;
-    border-top:2px solid var(--gold);
-    border-bottom:2px solid var(--gold);
-    font-size:1em;
-  }
-  .details{
-    text-align:center;
-    background:#fff;
-    margin:12px;
-    padding:12px;
-    border-radius:12px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.08);
-    line-height:1.5em;
-  }
-  .details a{color:var(--pink);text-decoration:none;font-weight:600}
-  section{
-    background:#fff;
-    margin:10px 12px;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 3px 8px rgba(0,0,0,0.07);
-  }
-  section h3{
-    color:var(--pink);
-    border-bottom:1px dashed #ddd;
-    padding-bottom:5px;
-    margin-bottom:10px;
-    font-size:1.1em;
-  }
-  ul{list-style:none;padding:0;margin:0}
-  ul li{
-    padding:6px 0;
-    border-bottom:1px dotted #eee;
-    font-size:.95em;
-  }
-  .old-price{text-decoration:line-through;color:#9ca3af;margin-right:5px}
-  .new-price{color:var(--mint);font-weight:700}
-  footer{
-    background:var(--purple);
-    color:white;
-    text-align:center;
-    padding:15px 10px;
-    font-size:.95em;
-    border-top:3px solid var(--gold);
-  }
-  footer a{color:#fde68a;text-decoration:none;font-weight:600}
-  @media (max-width:600px){
-    header h1{font-size:1.3em}
-    header h2{font-size:.9em}
-    .offer-banner{font-size:.95em;padding:8px}
-    .details{font-size:.9em;padding:10px}
-    section{padding:12px;margin:8px}
-    section h3{font-size:1em}
-    ul li{font-size:.9em}
-    footer{font-size:.85em;padding:10px}
-  }
+  :root{ --pink:#ec4899; --purple:#8b5cf6; --gold:#fbbf24; --mint:#16a34a; }
+  body{ font-family:'Poppins',sans-serif; background:linear-gradient(135deg,#fff1f2,#fdf2f8,#eef2ff); color:#333; margin:0 }
+  header{ background:linear-gradient(90deg,var(--pink),var(--purple)); color:#fff; text-align:center; padding:18px 8px }
+  header h1{ margin:0; font-size:1.6em } header h2{ margin:6px 0 0; font-weight:400; font-size:1em }
+  .banner{ text-align:center; background:#fde68a; color:#92400e; font-weight:600; padding:10px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold) }
+  .box{ background:#fff; margin:10px 12px; padding:15px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.08) }
+  .box h3{ color:var(--pink); border-bottom:1px dashed #ddd; padding-bottom:5px; margin-bottom:10px; font-size:1.05em }
+  .service{ display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px dotted #eee; font-size:.94em }
+  .price{ color:var(--mint); font-weight:700 }
+  .controls input[type="text"]{ width:100%; padding:10px; font-size:1em; border:1px solid #ccc; border-radius:8px; outline:none }
+  .controls input[type="text"]:focus{ border-color:var(--pink) }
+  .total{ text-align:right; font-weight:800; color:var(--mint); font-size:1.1em; margin-top:8px }
+  button{ background:var(--pink); color:#fff; border:none; border-radius:25px; padding:10px 20px; font-size:1em; font-weight:600; cursor:pointer; margin-top:12px }
+  footer{ background:var(--purple); color:#fff; text-align:center; padding:12px 10px; border-top:3px solid var(--gold); font-size:.9em }
+  @media (max-width:600px){ header h1{font-size:1.35em} header h2{font-size:.95em} .service{font-size:.9em} }
 </style>
 </head>
 <body>
-  <header>
-    <h1>🌸 Pak Arabic Parlor & Stitching Point 🌸</h1>
-    <h2>Al Khobar Shamalia</h2>
-  </header>
+<header>
+  <h1>🌸 Pak Arabic Parlor & Stitching Point 🌸</h1>
+  <h2>Al Khobar Shamalia</h2>
+</header>
+<div class="banner">✨ October Glow Offer – 10% OFF All Services! ✨</div>
 
-  <div class="offer-banner">
-    ✨ October Glow Offer – 10% OFF All Services! ✨
-  </div>
+<!-- Customer details -->
+<div class="box controls">
+  <label><b>Customer Name:</b></label>
+  <input type="text" id="customerName" placeholder="Enter your name">
+</div>
 
-  <div class="details">
-    <p><strong>Timing:</strong> 12:00 PM – 12:00 AM</p>
-    <p><strong>Call / WhatsApp:</strong> <a href="https://wa.me/966582617487">+966-582617487</a></p>
-  </div>
+<!-- MANICURE & PEDICURE -->
+<section class="box">
+  <h3>💅 Manicure & Pedicure</h3>
+  <label class="service">Light Manicure <span class="price">54 SAR <input type="checkbox" value="54" data-name="Light Manicure"></span></label>
+  <label class="service">Special Manicure <span class="price">63 SAR <input type="checkbox" value="63" data-name="Special Manicure"></span></label>
+  <label class="service">Regular Manicure <span class="price">45 SAR <input type="checkbox" value="45" data-name="Regular Manicure"></span></label>
+  <label class="service">Nail Cut & Filing (Hands) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Nail Cut & Filing (Hands)"></span></label>
+  <label class="service">Nail Polish (Hands) <span class="price">14 SAR <input type="checkbox" value="14" data-name="Nail Polish (Hands)"></span></label>
+  <label class="service">Light Pedicure <span class="price">63 SAR <input type="checkbox" value="63" data-name="Light Pedicure"></span></label>
+  <label class="service">Special Pedicure <span class="price">81 SAR <input type="checkbox" value="81" data-name="Special Pedicure"></span></label>
+  <label class="service">Regular Pedicure <span class="price">72 SAR <input type="checkbox" value="72" data-name="Regular Pedicure"></span></label>
+  <label class="service">Nail Cut & Filing (Feet) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Nail Cut & Filing (Feet)"></span></label>
+  <label class="service">Nail Polish (Feet) <span class="price">14 SAR <input type="checkbox" value="14" data-name="Nail Polish (Feet)"></span></label>
+</section>
 
-  <!-- MANICURE & PEDICURE -->
-  <section>
-    <h3>💅 Manicure & Pedicure</h3>
-    <ul>
-      <li>Light Manicure: <span class="old-price">60 SAR</span><span class="new-price">54 SAR</span></li>
-      <li>Special Manicure: <span class="old-price">70 SAR</span><span class="new-price">63 SAR</span></li>
-      <li>Regular Manicure: <span class="old-price">50 SAR</span><span class="new-price">45 SAR</span></li>
-      <li>Nail Cut & Filing: <span class="old-price">20 SAR</span><span class="new-price">18 SAR</span></li>
-      <li>Nail Polish: <span class="old-price">15 SAR</span><span class="new-price">14 SAR</span></li>
-      <li>Light Pedicure: <span class="old-price">70 SAR</span><span class="new-price">63 SAR</span></li>
-      <li>Special Pedicure: <span class="old-price">90 SAR</span><span class="new-price">81 SAR</span></li>
-      <li>Regular Pedicure: <span class="old-price">80 SAR</span><span class="new-price">72 SAR</span></li>
-      <li>Nail Cut & Filing (Feet): <span class="old-price">20 SAR</span><span class="new-price">18 SAR</span></li>
-      <li>Nail Polish (Feet): <span class="old-price">15 SAR</span><span class="new-price">14 SAR</span></li>
-    </ul>
-  </section>
+<!-- WAXING -->
+<section class="box">
+  <h3>🕯 Waxing</h3>
+  <label class="service">Full Body Wax <span class="price">180 SAR <input type="checkbox" value="180" data-name="Full Body Wax"></span></label>
+  <label class="service">Legs – Full <span class="price">90 SAR <input type="checkbox" value="90" data-name="Legs – Full"></span></label>
+  <label class="service">Legs – Half <span class="price">45 SAR <input type="checkbox" value="45" data-name="Legs – Half"></span></label>
+  <label class="service">Arms – Full <span class="price">81 SAR <input type="checkbox" value="81" data-name="Arms – Full"></span></label>
+  <label class="service">Arms – Half <span class="price">41 SAR <input type="checkbox" value="41" data-name="Arms – Half"></span></label>
+  <label class="service">Underarms <span class="price">27 SAR <input type="checkbox" value="27" data-name="Underarms"></span></label>
+  <label class="service">Hands <span class="price">14 SAR <input type="checkbox" value="14" data-name="Hands (Wax)"></span></label>
+  <label class="service">Feet <span class="price">14 SAR <input type="checkbox" value="14" data-name="Feet (Wax)"></span></label>
+</section>
 
-  <!-- WAXING -->
-  <section>
-    <h3>🕯 Waxing</h3>
-    <ul>
-      <li>Full Body Wax: <span class="old-price">200 SAR</span><span class="new-price">180 SAR</span></li>
-      <li>Legs (Full/Half): <span class="old-price">100/50 SAR</span><span class="new-price">90/45 SAR</span></li>
-      <li>Arms (Full/Half): <span class="old-price">90/45 SAR</span><span class="new-price">81/41 SAR</span></li>
-      <li>Underarms: <span class="old-price">30 SAR</span><span class="new-price">27 SAR</span></li>
-      <li>Hands/Feet: <span class="old-price">15/15 SAR</span><span class="new-price">14/14 SAR</span></li>
-    </ul>
-  </section>
+<!-- FACIAL & SKIN TREATMENTS -->
+<section class="box">
+  <h3>🌺 Facial & Skin Treatments</h3>
+  <label class="service">Deep Clean Up <span class="price">63 SAR <input type="checkbox" value="63" data-name="Deep Clean Up"></span></label>
+  <label class="service">Regular Facial <span class="price">72 SAR <input type="checkbox" value="72" data-name="Regular Facial"></span></label>
+  <label class="service">Golden Facial + Whitening Facial <span class="price">108 SAR <input type="checkbox" value="108" data-name="Golden Facial + Whitening Facial"></span></label>
+  <label class="service">Bleach Only <span class="price">36 SAR <input type="checkbox" value="36" data-name="Bleach Only"></span></label>
+  <label class="service">Skin Polish <span class="price">72 SAR <input type="checkbox" value="72" data-name="Skin Polish"></span></label>
+  <label class="service">Herbal Whitening <span class="price">99 SAR <input type="checkbox" value="99" data-name="Herbal Whitening"></span></label>
+  <label class="service">Skin Whitening <span class="price">90 SAR <input type="checkbox" value="90" data-name="Skin Whitening"></span></label>
+  <label class="service">Skin Lightening Pack <span class="price">117 SAR <input type="checkbox" value="117" data-name="Skin Lightening Pack"></span></label>
+  <label class="service">Clean & Glow 24K Whitening Gold Facial <span class="price">108 SAR <input type="checkbox" value="108" data-name="Clean & Glow 24K Whitening Gold Facial"></span></label>
+  <label class="service">Christine Whitening Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="Christine Whitening Facial"></span></label>
+  <label class="service">B-Cute Facial <span class="price">117 SAR <input type="checkbox" value="117" data-name="B-Cute Facial"></span></label>
+  <label class="service">Gold Series Facial <span class="price">126 SAR <input type="checkbox" value="126" data-name="Gold Series Facial"></span></label>
+  <label class="service">Doctor Derma Facial <span class="price">126 SAR <input type="checkbox" value="126" data-name="Doctor Derma Facial"></span></label>
+  <label class="service">Glowta White Special Facial <span class="price">135 SAR <input type="checkbox" value="135" data-name="Glowta White Special Facial"></span></label>
+  <label class="service">Hydra Facial <span class="price">135 SAR <input type="checkbox" value="135" data-name="Hydra Facial"></span></label>
+  <label class="service">Silky Cool Gold Facial <span class="price">144 SAR <input type="checkbox" value="144" data-name="Silky Cool Gold Facial"></span></label>
+  <label class="service">Silky Cool Diamond Facial <span class="price">144 SAR <input type="checkbox" value="144" data-name="Silky Cool Diamond Facial"></span></label>
+  <label class="service">Doctor Romeo Rice Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="Doctor Romeo Rice Facial"></span></label>
+  <label class="service">Doctor Romeo Vitamin C Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="Doctor Romeo Vitamin C Facial"></span></label>
+  <label class="service">ANN Facial <span class="price">90 SAR <input type="checkbox" value="90" data-name="ANN Facial"></span></label>
+  <label class="service">Botanic Gold & Whitening Facial <span class="price">108 SAR <input type="checkbox" value="108" data-name="Botanic Gold & Whitening Facial"></span></label>
+</section>
 
-  <!-- FACIAL & SKIN TREATMENTS -->
-  <section>
-    <h3>🌺 Facial & Skin Treatments</h3>
-    <ul>
-      <li>Deep Clean Up: <span class="old-price">70 SAR</span><span class="new-price">63 SAR</span></li>
-      <li>Regular Facial: <span class="old-price">80 SAR</span><span class="new-price">72 SAR</span></li>
-      <li>Golden Facial + Whitening Facial: <span class="old-price">120 SAR</span><span class="new-price">108 SAR</span></li>
-      <li>Bleach Only: <span class="old-price">40 SAR</span><span class="new-price">36 SAR</span></li>
-      <li>Skin Polish: <span class="old-price">80 SAR</span><span class="new-price">72 SAR</span></li>
-      <li>Herbal Whitening: <span class="old-price">110 SAR</span><span class="new-price">99 SAR</span></li>
-      <li>Skin Whitening: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>Skin Lightening Pack: <span class="old-price">130 SAR</span><span class="new-price">117 SAR</span></li>
-      <li>Clean & Glow 24K Whitening Gold Facial: <span class="old-price">120 SAR</span><span class="new-price">108 SAR</span></li>
-      <li>Christine Whitening Facial: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>B-Cute Facial: <span class="old-price">130 SAR</span><span class="new-price">117 SAR</span></li>
-      <li>Gold Series Facial: <span class="old-price">140 SAR</span><span class="new-price">126 SAR</span></li>
-      <li>Doctor Derma Facial: <span class="old-price">140 SAR</span><span class="new-price">126 SAR</span></li>
-      <li>Glowta White Special Facial: <span class="old-price">150 SAR</span><span class="new-price">135 SAR</span></li>
-      <li>Hydra Facial: <span class="old-price">150 SAR</span><span class="new-price">135 SAR</span></li>
-      <li>Silky Cool Gold Facial: <span class="old-price">160 SAR</span><span class="new-price">144 SAR</span></li>
-      <li>Silky Cool Diamond Facial: <span class="old-price">160 SAR</span><span class="new-price">144 SAR</span></li>
-      <li>Doctor Romeo Rice Facial: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>Doctor Romeo Vitamin C Facial: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>ANN Facial: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>Botanic Gold & Whitening Facial: <span class="old-price">120 SAR</span><span class="new-price">108 SAR</span></li>
-    </ul>
-  </section>
+<!-- THREADING & BLEACH -->
+<section class="box">
+  <h3>💆 Threading & Bleach</h3>
+  <label class="service">Face Threading <span class="price">45 SAR <input type="checkbox" value="45" data-name="Face Threading"></span></label>
+  <label class="service">Face Waxing <span class="price">54 SAR <input type="checkbox" value="54" data-name="Face Waxing"></span></label>
+  <label class="service">Face Bleach <span class="price">27 SAR <input type="checkbox" value="27" data-name="Face Bleach"></span></label>
+  <label class="service">Upper Lip + Chin <span class="price">14 SAR <input type="checkbox" value="14" data-name="Upper Lip + Chin"></span></label>
+  <label class="service">Eyebrow <span class="price">18 SAR <input type="checkbox" value="18" data-name="Eyebrow"></span></label>
+  <label class="service">Bleach (Item) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Bleach (Item)"></span></label>
+  <label class="service">Color (Item) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Color (Item)"></span></label>
+  <label class="service">Face Side (Wax) <span class="price">23 SAR <input type="checkbox" value="23" data-name="Face Side (Wax)"></span></label>
+  <label class="service">Face Side (Thread) <span class="price">23 SAR <input type="checkbox" value="23" data-name="Face Side (Thread)"></span></label>
+  <label class="service">Nose Inside <span class="price">9 SAR <input type="checkbox" value="9" data-name="Nose Inside"></span></label>
+  <label class="service">Forehead <span class="price">9 SAR <input type="checkbox" value="9" data-name="Forehead"></span></label>
+  <label class="service">Neck <span class="price">9 SAR <input type="checkbox" value="9" data-name="Neck"></span></label>
+</section>
 
-  <!-- THREADING & BLEACH -->
-  <section>
-    <h3>💆 Threading & Bleach</h3>
-    <ul>
-      <li>Face Threading: <span class="old-price">50 SAR</span><span class="new-price">45 SAR</span></li>
-      <li>Face Waxing: <span class="old-price">60 SAR</span><span class="new-price">54 SAR</span></li>
-      <li>Face Bleach: <span class="old-price">30 SAR</span><span class="new-price">27 SAR</span></li>
-      <li>Upper Lip + Chin: <span class="old-price">15 SAR</span><span class="new-price">14 SAR</span></li>
-      <li>Eyebrow/Bleach/Color: <span class="old-price">20/20/20 SAR</span><span class="new-price">18/18/18 SAR</span></li>
-      <li>Face Side (Wax/Thread): <span class="old-price">25/25 SAR</span><span class="new-price">23/23 SAR</span></li>
-      <li>Nose Inside: <span class="old-price">10 SAR</span><span class="new-price">9 SAR</span></li>
-      <li>Forehead/Neck: <span class="old-price">10 SAR</span><span class="new-price">9 SAR</span></li>
-    </ul>
-  </section>
+<!-- HAIR SERVICES -->
+<section class="box">
+  <h3>💇 Hair Services</h3>
+  <label class="service">Front Cut <span class="price">18 SAR <input type="checkbox" value="18" data-name="Front Cut"></span></label>
+  <label class="service">Trimming <span class="price">27 SAR <input type="checkbox" value="27" data-name="Trimming"></span></label>
+  <label class="service">U/V Straight <span class="price">36 SAR <input type="checkbox" value="36" data-name="U/V Straight"></span></label>
+  <label class="service">Layer Step (Based on Length) <span class="price">72 SAR <input type="checkbox" value="72" data-name="Layer Step"></span></label>
+  <label class="service">Blow Dry (Short) <span class="price">36 SAR <input type="checkbox" value="36" data-name="Blow Dry (Short)"></span></label>
+  <label class="service">Blow Dry (Medium) <span class="price">45 SAR <input type="checkbox" value="45" data-name="Blow Dry (Medium)"></span></label>
+  <label class="service">Blow Dry (Long) <span class="price">54 SAR <input type="checkbox" value="54" data-name="Blow Dry (Long)"></span></label>
+  <label class="service">Oil Hair SPA <span class="price">36 SAR <input type="checkbox" value="36" data-name="Oil Hair SPA"></span></label>
+  <label class="service">Henna/Hair Fall + Treatment <span class="price">81 SAR <input type="checkbox" value="81" data-name="Henna/Hair Fall + Treatment"></span></label>
+  <label class="service">Roots Highlights <span class="price">180 SAR <input type="checkbox" value="180" data-name="Roots Highlights"></span></label>
+  <label class="service">Baby Girl <span class="price">27 SAR <input type="checkbox" value="27" data-name="Baby Girl (Hair)"></span></label>
+  <label class="service">Sticking (According to Hair Condition) <span class="price">225 SAR <input type="checkbox" value="225" data-name="Sticking (According to Hair Condition)"></span></label>
+  <label class="service">Straightening <span class="price">540 SAR <input type="checkbox" value="540" data-name="Straightening"></span></label>
+  <label class="service">Rebonding <span class="price">630 SAR <input type="checkbox" value="630" data-name="Rebonding"></span></label>
+  <label class="service">Keratin + Protein Straightening Treatment <span class="price">720 SAR <input type="checkbox" value="720" data-name="Keratin + Protein Straightening Treatment"></span></label>
+  <label class="service">Hair Dye (Without Color) <span class="price">36 SAR <input type="checkbox" value="36" data-name="Hair Dye (Without Color)"></span></label>
+  <label class="service">Hair Dye (With Color) <span class="price">63 SAR <input type="checkbox" value="63" data-name="Hair Dye (With Color)"></span></label>
+</section>
 
-  <!-- HAIR SERVICES -->
-  <section>
-    <h3>💇 Hair Services</h3>
-    <ul>
-      <li>Front Cut: <span class="old-price">20 SAR</span><span class="new-price">18 SAR</span></li>
-      <li>Trimming: <span class="old-price">30 SAR</span><span class="new-price">27 SAR</span></li>
-      <li>U/V Straight: <span class="old-price">40 SAR</span><span class="new-price">36 SAR</span></li>
-      <li>Layer Step (Based on Length): <span class="old-price">80 SAR</span><span class="new-price">72 SAR</span></li>
-      <li>Blow Dry: <span class="old-price">40/50/60 SAR</span><span class="new-price">36/45/54 SAR</span></li>
-      <li>Oil Hair SPA: <span class="old-price">40 SAR</span><span class="new-price">36 SAR</span></li>
-      <li>Henna/Hair Fall + Treatment: <span class="old-price">90 SAR</span><span class="new-price">81 SAR</span></li>
-      <li>Roots Highlights: <span class="old-price">200 SAR</span><span class="new-price">180 SAR</span></li>
-      <li>Baby Girl: <span class="old-price">30 SAR</span><span class="new-price">27 SAR</span></li>
-      <li>Sticking (According to Hair Condition): <span class="old-price">250 SAR</span><span class="new-price">225 SAR</span></li>
-      <li>Straightening: <span class="old-price">600 SAR</span><span class="new-price">540 SAR</span></li>
-      <li>Rebonding: <span class="old-price">700 SAR</span><span class="new-price">630 SAR</span></li>
-      <li>Keratin + Protein Straightening Treatment: <span class="old-price">800 SAR</span><span class="new-price">720 SAR</span></li>
-      <li>Hair Dye (Without Color): <span class="old-price">40 SAR</span><span class="new-price">36 SAR</span></li>
-      <li>Hair Dye (With Color): <span class="old-price">70 SAR</span><span class="new-price">63 SAR</span></li>
-    </ul>
-  </section>
+<!-- HENNA DESIGNS -->
+<section class="box">
+  <h3>🌿 Henna Designs</h3>
+  <label class="service">Hand Front Side Only <span class="price">14 SAR <input type="checkbox" value="14" data-name="Henna – Hand Front Side Only"></span></label>
+  <label class="service">Hand Back Side Only <span class="price">14 SAR <input type="checkbox" value="14" data-name="Henna – Hand Back Side Only"></span></label>
+  <label class="service">Hand to Half Arms <span class="price">23 SAR <input type="checkbox" value="23" data-name="Henna – Hand to Half Arms"></span></label>
+  <label class="service">Hand to Full Arms <span class="price">32 SAR <input type="checkbox" value="32" data-name="Henna – Hand to Full Arms"></span></label>
+  <label class="service">Baby Girl Hand <span class="price">9 SAR <input type="checkbox" value="9" data-name="Henna – Baby Girl Hand"></span></label>
+</section>
 
-  <!-- HENNA DESIGNS -->
-  <section>
-    <h3>🌿 Henna Designs</h3>
-    <ul>
-      <li>Hand Front Side Only: <span class="old-price">15 SAR</span><span class="new-price">14 SAR</span></li>
-      <li>Hand Back Side Only: <span class="old-price">15 SAR</span><span class="new-price">14 SAR</span></li>
-      <li>Hand to Half Arms: <span class="old-price">25 SAR</span><span class="new-price">23 SAR</span></li>
-      <li>Hand to Full Arms: <span class="old-price">35 SAR</span><span class="new-price">32 SAR</span></li>
-      <li>Baby Girl Hand: <span class="old-price">10 SAR</span><span class="new-price">9 SAR</span></li>
-    </ul>
-  </section>
+<!-- EXTRA ITEMS -->
+<section class="box">
+  <h3>🛍 Extra Items Availability</h3>
+  <label class="service">Organic Pakistani Original Red Hair Mehindi <span class="price">90 SAR <input type="checkbox" value="90" data-name="Red Hair Mehindi (Organic Pakistani Original)"></span></label>
+  <label class="service">Organic Fast Hair Growth Oil – 200 ml <span class="price">90 SAR <input type="checkbox" value="90" data-name="Hair Growth Oil 200 ml"></span></label>
+  <label class="service">Organic Fast Hair Growth Oil – 100 ml <span class="price">45 SAR <input type="checkbox" value="45" data-name="Hair Growth Oil 100 ml"></span></label>
+  <label class="service">Organic Fast Hair Growth Oil – 50 ml <span class="price">23 SAR <input type="checkbox" value="23" data-name="Hair Growth Oil 50 ml"></span></label>
+  <label class="service">Herbal Skin Whitening Botanic Mask (per pack) <span class="price">18 SAR <input type="checkbox" value="18" data-name="Herbal Skin Whitening Botanic Mask (per pack)"></span></label>
+  <label class="service">Full Body Massage <span class="price">135 SAR <input type="checkbox" value="135" data-name="Full Body Massage"></span></label>
+  <label class="service">All Face Problems Whitening Cream <span class="price">18 SAR <input type="checkbox" value="18" data-name="All Face Problems Whitening Cream"></span></label>
+</section>
 
-  <!-- EXTRA ITEMS -->
-  <section>
-    <h3>🛍 Extra Items Availability</h3>
-    <ul>
-      <li>Organic Pakistani Original Red Hair Mehindi: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>Organic Fast Hair Growth Oil 200 ml: <span class="old-price">100 SAR</span><span class="new-price">90 SAR</span></li>
-      <li>Organic Fast Hair Growth Oil 100 ml: <span class="old-price">50 SAR</span><span class="new-price">45 SAR</span></li>
-      <li>Organic Fast Hair Growth Oil 50 ml: <span class="old-price">25 SAR</span><span class="new-price">23 SAR</span></li>
-      <li>Herbal Skin Whitening Botanic Mask: <span class="old-price">20 SAR</span><span class="new-price">18 SAR</span> per pack</li>
-      <li>Full Body Massage: <span class="old-price">150 SAR</span><span class="new-price">135 SAR</span></li>
-      <li>All Face Problems Whitening Cream: <span class="old-price">20 SAR</span><span class="new-price">18 SAR</span></li>
-    </ul>
-  </section>
+<!-- TOTAL + SEND -->
+<div class="box controls">
+  <div class="total">Total: <span id="total">0</span> SAR</div>
+  <button id="send">Send to WhatsApp 💬</button>
+</div>
 
-  <footer>
-    📞 Call / WhatsApp:
-    <a href="https://wa.me/966582617487">+966-582617487</a><br>
-    © 2025 Pak Arabic Parlor & Stitching Point – All Rights Reserved.
-  </footer>
+<footer>
+  Timing: 12:00 PM – 12:00 AM | Call / WhatsApp: +966-582617487
+</footer>
+
+<script>
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const totalDisplay = document.getElementById('total');
+const sendBtn = document.getElementById('send');
+const nameInput = document.getElementById('customerName');
+
+checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
+
+function updateTotal(){
+  let total = 0;
+  checkboxes.forEach(c => { if(c.checked) total += parseFloat(c.value); });
+  totalDisplay.textContent = total.toFixed(0);
+}
+
+sendBtn.addEventListener('click', () => {
+  const selected = Array.from(checkboxes)
+    .filter(c => c.checked)
+    .map(c => ${c.dataset.name} (${parseFloat(c.value).toFixed(0)} SAR));
+
+  const customer = nameInput.value.trim() || "Customer";
+
+  if(selected.length === 0){
+    alert("Please select at least one service.");
+    return;
+  }
+
+  const total = totalDisplay.textContent;
+  const message =
+    *Pak Arabic Parlor Booking*%0A%0A +
+    👩 Name: ${encodeURIComponent(customer)}%0A +
+    %0A*Selected Services:*%0A- ${selected.join('%0A- ')}%0A%0A +
+    💰 *Total:* ${total} SAR%0A +
+    📍 Al Khobar Shamalia%0A +
+    ⏰ 12 PM – 12 AM;
+
+  const phone = "966582617487";
+  const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+  const url = isMobile
+    ? https://wa.me/${phone}?text=${message}
+    : https://web.whatsapp.com/send?phone=${phone}&text=${message};
+
+  window.open(url, '_blank');
+});
+</script>
 </body>
 </html>
