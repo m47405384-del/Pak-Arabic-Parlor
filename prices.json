@@ -1,88 +1,120 @@
-[
-  { "category": "Manicure & Pedicure", "service": "Light Manicure", "old": 60 },
-  { "category": "Manicure & Pedicure", "service": "Special Manicure", "old": 70 },
-  { "category": "Manicure & Pedicure", "service": "Regular Manicure", "old": 50 },
-  { "category": "Manicure & Pedicure", "service": "Nail Cut & Filing (Hands)", "old": 20 },
-  { "category": "Manicure & Pedicure", "service": "Nail Polish (Hands)", "old": 15 },
-  { "category": "Manicure & Pedicure", "service": "Light Pedicure", "old": 70 },
-  { "category": "Manicure & Pedicure", "service": "Special Pedicure", "old": 90 },
-  { "category": "Manicure & Pedicure", "service": "Regular Pedicure", "old": 80 },
-  { "category": "Manicure & Pedicure", "service": "Nail Cut & Filing (Feet)", "old": 20 },
-  { "category": "Manicure & Pedicure", "service": "Nail Polish (Feet)", "old": 15 },
-
-  { "category": "Waxing", "service": "Full Body Wax", "old": 200 },
-  { "category": "Waxing", "service": "Legs – Full", "old": 100 },
-  { "category": "Waxing", "service": "Legs – Half", "old": 50 },
-  { "category": "Waxing", "service": "Arms – Full", "old": 90 },
-  { "category": "Waxing", "service": "Arms – Half", "old": 45 },
-  { "category": "Waxing", "service": "Underarms", "old": 30 },
-  { "category": "Waxing", "service": "Hands (Wax)", "old": 15 },
-  { "category": "Waxing", "service": "Feet (Wax)", "old": 15 },
-
-  { "category": "Facial & Skin Treatments", "service": "Deep Clean Up", "old": 70 },
-  { "category": "Facial & Skin Treatments", "service": "Regular Facial", "old": 80 },
-  { "category": "Facial & Skin Treatments", "service": "Golden Facial + Whitening Facial", "old": 120 },
-  { "category": "Facial & Skin Treatments", "service": "Bleach Only", "old": 40 },
-  { "category": "Facial & Skin Treatments", "service": "Skin Polish", "old": 80 },
-  { "category": "Facial & Skin Treatments", "service": "Herbal Whitening", "old": 110 },
-  { "category": "Facial & Skin Treatments", "service": "Skin Whitening", "old": 100 },
-  { "category": "Facial & Skin Treatments", "service": "Skin Lightening Pack", "old": 130 },
-  { "category": "Facial & Skin Treatments", "service": "Clean & Glow 24K Whitening Gold Facial", "old": 120 },
-  { "category": "Facial & Skin Treatments", "service": "Christine Whitening Facial", "old": 100 },
-  { "category": "Facial & Skin Treatments", "service": "B-Cute Facial", "old": 130 },
-  { "category": "Facial & Skin Treatments", "service": "Gold Series Facial", "old": 140 },
-  { "category": "Facial & Skin Treatments", "service": "Doctor Derma Facial", "old": 140 },
-  { "category": "Facial & Skin Treatments", "service": "Glowta White Special Facial", "old": 150 },
-  { "category": "Facial & Skin Treatments", "service": "Hydra Facial", "old": 150 },
-  { "category": "Facial & Skin Treatments", "service": "Silky Cool Gold Facial", "old": 160 },
-  { "category": "Facial & Skin Treatments", "service": "Silky Cool Diamond Facial", "old": 160 },
-  { "category": "Facial & Skin Treatments", "service": "Doctor Romeo Rice Facial", "old": 100 },
-  { "category": "Facial & Skin Treatments", "service": "Doctor Romeo Vitamin C Facial", "old": 100 },
-  { "category": "Facial & Skin Treatments", "service": "ANN Facial", "old": 100 },
-  { "category": "Facial & Skin Treatments", "service": "Botanic Gold & Whitening Facial", "old": 120 },
-
-  { "category": "Threading & Bleach", "service": "Face Threading", "old": 50 },
-  { "category": "Threading & Bleach", "service": "Face Waxing", "old": 60 },
-  { "category": "Threading & Bleach", "service": "Face Bleach", "old": 30 },
-  { "category": "Threading & Bleach", "service": "Upper Lip + Chin", "old": 15 },
-  { "category": "Threading & Bleach", "service": "Eyebrow", "old": 20 },
-  { "category": "Threading & Bleach", "service": "Bleach (Item)", "old": 20 },
-  { "category": "Threading & Bleach", "service": "Color (Item)", "old": 20 },
-  { "category": "Threading & Bleach", "service": "Face Side (Wax)", "old": 25 },
-  { "category": "Threading & Bleach", "service": "Face Side (Thread)", "old": 25 },
-  { "category": "Threading & Bleach", "service": "Nose Inside", "old": 10 },
-  { "category": "Threading & Bleach", "service": "Forehead", "old": 10 },
-  { "category": "Threading & Bleach", "service": "Neck", "old": 10 },
-
-  { "category": "Hair Services", "service": "Front Cut", "old": 20 },
-  { "category": "Hair Services", "service": "Trimming", "old": 30 },
-  { "category": "Hair Services", "service": "U/V Straight", "old": 40 },
-  { "category": "Hair Services", "service": "Layer Step (Based on Length)", "old": 80 },
-  { "category": "Hair Services", "service": "Blow Dry – Short", "old": 40 },
-  { "category": "Hair Services", "service": "Blow Dry – Medium", "old": 50 },
-  { "category": "Hair Services", "service": "Blow Dry – Long", "old": 60 },
-  { "category": "Hair Services", "service": "Oil Hair SPA", "old": 40 },
-  { "category": "Hair Services", "service": "Henna/Hair Fall + Treatment", "old": 90 },
-  { "category": "Hair Services", "service": "Roots Highlights", "old": 200 },
-  { "category": "Hair Services", "service": "Baby Girl (Hair)", "old": 30 },
-  { "category": "Hair Services", "service": "Sticking (According to Hair Condition)", "old": 250 },
-  { "category": "Hair Services", "service": "Straightening", "old": 600 },
-  { "category": "Hair Services", "service": "Rebonding", "old": 700 },
-  { "category": "Hair Services", "service": "Keratin + Protein Straightening Treatment", "old": 800 },
-  { "category": "Hair Services", "service": "Hair Dye (Without Color)", "old": 40 },
-  { "category": "Hair Services", "service": "Hair Dye (With Color)", "old": 70 },
-
-  { "category": "Henna Designs", "service": "Hand Front Side Only", "old": 15 },
-  { "category": "Henna Designs", "service": "Hand Back Side Only", "old": 15 },
-  { "category": "Henna Designs", "service": "Hand to Half Arms", "old": 25 },
-  { "category": "Henna Designs", "service": "Hand to Full Arms", "old": 35 },
-  { "category": "Henna Designs", "service": "Baby Girl Hand", "old": 10 },
-
-  { "category": "Extra Items", "service": "Organic Pakistani Original Red Hair Mehindi", "old": 100 },
-  { "category": "Extra Items", "service": "Organic Fast Hair Growth Oil – 200 ml", "old": 100 },
-  { "category": "Extra Items", "service": "Organic Fast Hair Growth Oil – 100 ml", "old": 50 },
-  { "category": "Extra Items", "service": "Organic Fast Hair Growth Oil – 50 ml", "old": 25 },
-  { "category": "Extra Items", "service": "Herbal Skin Whitening Botanic Mask (per pack)", "old": 20 },
-  { "category": "Extra Items", "service": "Full Body Massage", "old": 150 },
-  { "category": "Extra Items", "service": "All Face Problems Whitening Cream", "old": 20 }
-]
+{
+  "discount": 10,
+  "services": [
+    {
+      "category": "Manicure & Pedicure",
+      "items": [
+        { "name": "Light Manicure", "price": 60 },
+        { "name": "Special Manicure", "price": 70 },
+        { "name": "Regular Manicure", "price": 50 },
+        { "name": "Nail Cut & Filing (Hands)", "price": 20 },
+        { "name": "Nail Polish (Hands)", "price": 15 },
+        { "name": "Light Pedicure", "price": 70 },
+        { "name": "Special Pedicure", "price": 90 },
+        { "name": "Regular Pedicure", "price": 80 },
+        { "name": "Nail Cut & Filing (Feet)", "price": 20 },
+        { "name": "Nail Polish (Feet)", "price": 15 }
+      ]
+    },
+    {
+      "category": "Waxing",
+      "items": [
+        { "name": "Full Body Wax", "price": 200 },
+        { "name": "Legs (Full)", "price": 100 },
+        { "name": "Legs (Half)", "price": 50 },
+        { "name": "Arms (Full)", "price": 90 },
+        { "name": "Arms (Half)", "price": 45 },
+        { "name": "Underarms", "price": 30 },
+        { "name": "Hands (Wax)", "price": 15 },
+        { "name": "Feet (Wax)", "price": 15 }
+      ]
+    },
+    {
+      "category": "Facial & Skin Treatments",
+      "items": [
+        { "name": "Deep Clean Up", "price": 70 },
+        { "name": "Regular Facial", "price": 80 },
+        { "name": "Golden Facial + Whitening Facial", "price": 120 },
+        { "name": "Bleach Only", "price": 40 },
+        { "name": "Skin Polish", "price": 80 },
+        { "name": "Herbal Whitening", "price": 110 },
+        { "name": "Skin Whitening", "price": 100 },
+        { "name": "Skin Lightening Pack", "price": 130 },
+        { "name": "Clean & Glow 24K Whitening Gold Facial", "price": 120 },
+        { "name": "Christine Whitening Facial", "price": 100 },
+        { "name": "B-Cute Facial", "price": 130 },
+        { "name": "Gold Series Facial", "price": 140 },
+        { "name": "Doctor Derma Facial", "price": 140 },
+        { "name": "Glowta White Special Facial", "price": 150 },
+        { "name": "Hydra Facial", "price": 150 },
+        { "name": "Silky Cool Gold Facial", "price": 160 },
+        { "name": "Silky Cool Diamond Facial", "price": 160 },
+        { "name": "Doctor Romeo Rice Facial", "price": 100 },
+        { "name": "Doctor Romeo Vitamin C Facial", "price": 100 },
+        { "name": "ANN Facial", "price": 100 },
+        { "name": "Botanic Gold & Whitening Facial", "price": 120 }
+      ]
+    },
+    {
+      "category": "Threading & Bleach",
+      "items": [
+        { "name": "Face Threading", "price": 50 },
+        { "name": "Face Waxing", "price": 60 },
+        { "name": "Face Bleach", "price": 30 },
+        { "name": "Upper Lip + Chin", "price": 15 },
+        { "name": "Eyebrow", "price": 20 },
+        { "name": "Bleach (Item)", "price": 20 },
+        { "name": "Color (Item)", "price": 20 },
+        { "name": "Face Side (Wax)", "price": 25 },
+        { "name": "Face Side (Thread)", "price": 25 },
+        { "name": "Nose Inside", "price": 10 },
+        { "name": "Forehead", "price": 10 },
+        { "name": "Neck", "price": 10 }
+      ]
+    },
+    {
+      "category": "Hair Services",
+      "items": [
+        { "name": "Front Cut", "price": 20 },
+        { "name": "Trimming", "price": 30 },
+        { "name": "U/V Straight", "price": 40 },
+        { "name": "Layer Step (Based on Length)", "price": 80 },
+        { "name": "Blow Dry — Short", "price": 40 },
+        { "name": "Blow Dry — Medium", "price": 50 },
+        { "name": "Blow Dry — Long", "price": 60 },
+        { "name": "Oil Hair SPA", "price": 40 },
+        { "name": "Henna/Hair Fall + Treatment", "price": 90 },
+        { "name": "Roots Highlights", "price": 200 },
+        { "name": "Baby Girl (Hair)", "price": 30 },
+        { "name": "Sticking (According to Hair Condition)", "price": 250 },
+        { "name": "Straightening", "price": 600 },
+        { "name": "Rebonding", "price": 700 },
+        { "name": "Keratin + Protein Straightening Treatment", "price": 800 },
+        { "name": "Hair Dye (Without Color)", "price": 40 },
+        { "name": "Hair Dye (With Color)", "price": 70 }
+      ]
+    },
+    {
+      "category": "Henna Designs",
+      "items": [
+        { "name": "Hand Front Side Only", "price": 15 },
+        { "name": "Hand Back Side Only", "price": 15 },
+        { "name": "Hand to Half Arms", "price": 25 },
+        { "name": "Hand to Full Arms", "price": 35 },
+        { "name": "Baby Girl Hand", "price": 10 }
+      ]
+    },
+    {
+      "category": "Extra Items Availability",
+      "items": [
+        { "name": "Organic Pakistani Original Red Hair Mehindi", "price": 100 },
+        { "name": "Organic Fast Hair Growth Oil — 200 ml", "price": 100 },
+        { "name": "Organic Fast Hair Growth Oil — 100 ml", "price": 50 },
+        { "name": "Organic Fast Hair Growth Oil — 50 ml", "price": 25 },
+        { "name": "Herbal Skin Whitening Botanic Mask (per pack)", "price": 20 },
+        { "name": "Full Body Massage", "price": 150 },
+        { "name": "All Face Problems Whitening Cream", "price": 20 }
+      ]
+    }
+  ]
+}
