@@ -3,63 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pak Arabic Parlor & Stitching Point – Monthly Offer</title>
+  <title>Pak Arabic Parlor & Stitching Point – Booking</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- 🌸 HEADER -->
   <header>
-    <div>
-      <h1>🌸 Pak Arabic Parlor & Stitching Point 🌸</h1>
-      <h2>Al Khobar Shamalia</h2>
-    </div>
+    <h1>Pak Arabic Parlor & Stitching Point</h1>
+    <h2>Al Khobar Shamalia</h2>
+    <a href="https://goo.gl/maps/ttfrKNCARaquVyWb9" target="_blank" class="map-link">View on Google Maps</a>
   </header>
 
-  <!-- ✨ AUTO OFFER BANNER -->
-  <div class="banner" aria-live="polite">✨ Loading Offer... ✨</div>
-
-  <!-- 🔍 SEARCH + CATEGORY -->
-  <section class="box search-box">
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="🔍 Search service... (Facial, Wax, Cut)" autocomplete="off" />
-      <button id="clearSearch" aria-label="Clear search">✖</button>
-    </div>
-    <select id="categoryFilter" aria-label="Filter by category">
-      <option value="all">All Categories</option>
-    </select>
+  <!-- ✨ OFFER -->
+  <section class="banner">
+    ✨ October Glow Offer – 10% OFF All Services! ✨
   </section>
 
-  <!-- ℹ️ CONTACT INFO -->
-  <section class="box info">
-    <div><b>Timing:</b> 12:00 PM – 12:00 AM</div>
-    <div><b>Call / WhatsApp:</b> +966-582617487</div>
-  </section>
-
-  <!-- 👩 CUSTOMER -->
+  <!-- 🧍 CUSTOMER NAME -->
   <section class="box controls">
-    <label for="customerName"><b>Customer Name:</b></label>
-    <input type="text" id="customerName" placeholder="Enter your name" />
+    <h3>👩 Customer Information</h3>
+    <label for="customerName">Your Name:</label>
+    <input type="text" id="customerName" placeholder="Enter your name">
   </section>
 
-  <!-- 🧾 SERVICES -->
-  <div id="serviceList" aria-live="polite"></div>
-
-  <!-- 💰 TOTAL -->
+  <!-- 📅 DATE & TIME -->
   <section class="box controls">
-    <div class="total">Total: <span id="total">0</span> SAR</div>
-    <button id="send" type="button">Send to WhatsApp 💬</button>
-    <button id="clear" type="button" class="secondary">Clear Selections 🔄</button>
-    <p class="hint">Tip: Use search or filter by category. Press ✖ to clear search.</p>
+    <h3>🕒 Select Preferred Visit Date & Time</h3>
+    <label for="visitTime">Choose Date & Time:</label>
+    <input type="datetime-local" id="visitTime" />
   </section>
 
+  <!-- 💅 MANICURE & PEDICURE -->
+  <section class="box">
+    <h3>💅 Manicure & Pedicure</h3>
+    <label class="service"><input type="checkbox" value="54" data-name="Light Manicure"> Light Manicure – 54 SAR</label>
+    <label class="service"><input type="checkbox" value="63" data-name="Special Manicure"> Special Manicure – 63 SAR</label>
+    <label class="service"><input type="checkbox" value="72" data-name="Regular Pedicure"> Regular Pedicure – 72 SAR</label>
+    <label class="service"><input type="checkbox" value="81" data-name="Special Pedicure"> Special Pedicure – 81 SAR</label>
+  </section>
+
+  <!-- 🌺 FACIAL -->
+  <section class="box">
+    <h3>🌺 Facial & Skin Treatments</h3>
+    <label class="service"><input type="checkbox" value="108" data-name="Golden Facial + Whitening"> Golden Facial + Whitening – 108 SAR</label>
+    <label class="service"><input type="checkbox" value="99" data-name="Herbal Whitening"> Herbal Whitening – 99 SAR</label>
+    <label class="service"><input type="checkbox" value="135" data-name="Hydra Facial"> Hydra Facial – 135 SAR</label>
+    <label class="service"><input type="checkbox" value="117" data-name="B-Cute Facial"> B-Cute Facial – 117 SAR</label>
+  </section>
+
+  <!-- 💆 THREADING -->
+  <section class="box">
+    <h3>💆 Threading & Bleach</h3>
+    <label class="service"><input type="checkbox" value="45" data-name="Face Threading"> Face Threading – 45 SAR</label>
+    <label class="service"><input type="checkbox" value="54" data-name="Face Waxing"> Face Waxing – 54 SAR</label>
+    <label class="service"><input type="checkbox" value="27" data-name="Face Bleach"> Face Bleach – 27 SAR</label>
+    <label class="service"><input type="checkbox" value="14" data-name="Upper Lip + Chin"> Upper Lip + Chin – 14 SAR</label>
+  </section>
+
+  <!-- 💇 HAIR -->
+  <section class="box">
+    <h3>💇 Hair Services</h3>
+    <label class="service"><input type="checkbox" value="72" data-name="Layer Step"> Layer Step (Length-based) – 72 SAR</label>
+    <label class="service"><input type="checkbox" value="225" data-name="Hair Sticking"> Hair Sticking – 225 SAR</label>
+    <label class="service"><input type="checkbox" value="540" data-name="Hair Straightening"> Straightening – 540 SAR</label>
+    <label class="service"><input type="checkbox" value="720" data-name="Keratin + Protein Treatment"> Keratin + Protein Treatment – 720 SAR</label>
+  </section>
+
+  <!-- 🌿 HENNA -->
+  <section class="box">
+    <h3>🌿 Henna Designs</h3>
+    <label class="service"><input type="checkbox" value="14" data-name="Hand Front Side"> Hand Front Side – 14 SAR</label>
+    <label class="service"><input type="checkbox" value="14" data-name="Hand Back Side"> Hand Back Side – 14 SAR</label>
+    <label class="service"><input type="checkbox" value="23" data-name="Half Arm Henna"> Hand to Half Arm – 23 SAR</label>
+  </section>
+
+  <!-- 🛍️ EXTRA ITEMS -->
+  <section class="box">
+    <h3>🛍️ Extra Items</h3>
+    <label class="service"><input type="checkbox" value="90" data-name="Red Hair Mehindi"> Organic Red Hair Mehindi – 90 SAR</label>
+    <label class="service"><input type="checkbox" value="45" data-name="Hair Growth Oil 100ml"> Hair Growth Oil (100ml) – 45 SAR</label>
+    <label class="service"><input type="checkbox" value="135" data-name="Full Body Massage"> Full Body Massage – 135 SAR</label>
+  </section>
+
+  <!-- ✅ CONFIRM BUTTON -->
+  <div class="box controls">
+    <button id="confirmBtn">Confirm Appointment</button>
+  </div>
+
+  <!-- 📋 SUMMARY BOX -->
+  <section class="box summary-box" id="summaryBox">
+    <h3>📋 Booking Summary</h3>
+    <p id="summaryMessage">No appointment selected yet.</p>
+    <ul id="serviceList"></ul>
+    <p id="totalPrice"></p>
+  </section>
+
+  <!-- 📞 FOOTER -->
   <footer>
     Timing: 12:00 PM – 12:00 AM | Call / WhatsApp: +966-582617487
   </footer>
-
-  <button id="backToTop" title="Go to top">⬆️</button>
-
-  <a href="https://wa.me/966582617487" class="float-whatsapp" target="_blank" rel="noopener">💬</a>
-  <a href="tel:+966582617487" class="float-call" rel="noopener">📞</a>
 
   <script src="script.js"></script>
 </body>
