@@ -3,13 +3,18 @@
   --purple: #8b5cf6;
   --gold: #fbbf24;
   --mint: #16a34a;
+  --bg1: #fff1f2;
+  --bg2: #fdf2f8;
+  --bg3: #eef2ff;
 }
 
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #fff1f2, #fdf2f8, #eef2ff);
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
   color: #333;
-  margin: 0;
   line-height: 1.6;
 }
 
@@ -19,9 +24,10 @@ header {
   color: #fff;
   text-align: center;
   padding: 20px 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
-header h1 { margin: 0; font-size: 1.6rem; }
-header h2 { margin: 6px 0; font-weight: 400; }
+header h1 { margin: 0; font-size: 1.6rem; font-weight: 700; }
+header h2 { margin: 6px 0 10px; font-weight: 400; opacity: 0.95; }
 .map-link {
   display: inline-block;
   background: rgba(255,255,255,0.2);
@@ -31,12 +37,11 @@ header h2 { margin: 6px 0; font-weight: 400; }
   font-size: 0.9rem;
   padding: 6px 14px;
   border-radius: 8px;
-  margin-top: 6px;
   transition: 0.25s;
 }
 .map-link:hover { background: rgba(255,255,255,0.35); }
 
-/* OFFER */
+/* BANNER */
 .banner {
   text-align: center;
   background: #fde68a;
@@ -47,7 +52,7 @@ header h2 { margin: 6px 0; font-weight: 400; }
   border-bottom: 2px solid var(--gold);
 }
 
-/* BOX */
+/* BOXES */
 .box {
   background: #fff;
   margin: 12px;
@@ -58,38 +63,58 @@ header h2 { margin: 6px 0; font-weight: 400; }
 .box h3 {
   color: var(--pink);
   border-bottom: 1px dashed #ddd;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   margin-bottom: 10px;
+}
+
+/* INFO CARD */
+.info {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+  background: #fff7fc;
+  border: 1px solid #ffe4ef;
 }
 
 /* CONTROLS */
 .controls { text-align: center; }
-input[type="text"], input[type="datetime-local"] {
+.controls label { display: block; font-weight: 600; margin-bottom: 6px; }
+.controls input[type="text"],
+.controls input[type="datetime-local"] {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  margin-top: 5px;
 }
-input:focus {
+.controls input:focus {
   border-color: var(--pink);
   box-shadow: 0 0 0 2px rgba(236,72,153,0.15);
 }
+.total-row {
+  font-weight: 800;
+  color: var(--mint);
+  margin-bottom: 8px;
+  text-align: right;
+}
 
-/* SERVICES */
+/* SERVICE LINE */
 .service {
-  display: block;
-  margin: 8px 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px dotted #eee;
 }
-.service input {
-  accent-color: var(--pink);
-  margin-right: 8px;
-  transform: scale(1.1);
-}
+.service:last-child { border-bottom: none; }
+.price { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.old { text-decoration: line-through; color: #888; font-size: 0.9rem; }
+.new { color: var(--mint); font-weight: 700; }
 
-/* BUTTON */
+/* BUTTONS */
 button {
   background: linear-gradient(90deg, var(--pink), var(--purple));
   color: #fff;
@@ -98,24 +123,29 @@ button {
   font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
-  transition: 0.25s;
+  transition: 0.2s;
+  width: 100%;
+  max-width: 360px;
+  margin: 6px auto 0;
+  display: block;
 }
-button:hover { transform: scale(1.05); }
+button:hover { transform: scale(1.03); }
+button.secondary {
+  background: #f3f4f6;
+  color: #333;
+  border: 1px solid #e5e7eb;
+}
+button.secondary:hover {
+  background: #e5e7eb;
+}
 
 /* SUMMARY */
 .summary-box { display: none; }
 .summary-box.active { display: block; }
-.summary-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-.summary-box li {
-  padding: 4px 0;
-  border-bottom: 1px dotted #ddd;
-}
-#summaryMessage { font-weight: 500; color: #444; }
-#totalPrice { font-weight: 700; color: var(--mint); margin-top: 8px; }
+.summary-box ul { list-style: none; margin-top: 10px; }
+.summary-box li { padding: 4px 0; border-bottom: 1px dotted #eee; }
+#summaryMessage { font-weight: 600; color: #444; }
+#totalPrice { font-weight: 800; color: var(--mint); margin-top: 8px; }
 
 /* FOOTER */
 footer {
@@ -125,4 +155,11 @@ footer {
   padding: 12px;
   border-top: 3px solid var(--gold);
   font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.35rem; }
+  .service { grid-template-columns: 1fr auto; }
+  .price { order: 2; }
 }
